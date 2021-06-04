@@ -3,7 +3,16 @@
 - name: This set up apache2 server
   hosts: all
   tasks:
+    - name: update packages
+      apt: 
+        update_cache: yes
+        
     - name: install apache2 package
       apt:
        - name: apache2
          state: present
+    
+    - name: Check apache2 started or not
+      service:
+        - name: apache2
+          state: started
