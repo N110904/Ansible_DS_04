@@ -1,0 +1,14 @@
+#my first test program in the folder ANSIBLE_DS_04
+---
+- myfruit:
+  - apple
+  - banana
+  - mango
+
+- microservice:
+   name: app
+   version: [1.7 1.9]
+
+
+
+
