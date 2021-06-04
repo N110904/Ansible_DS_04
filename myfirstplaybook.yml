@@ -1,0 +1,9 @@
+#my first play book
+---
+- name: This set up apache2 server
+  hosts: all
+  tasks:
+    - name: install apache2 package
+      apt:
+       - name: apache2
+         state: present
