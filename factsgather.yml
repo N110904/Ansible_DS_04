@@ -6,7 +6,7 @@
   hosts: all
   become: yes
   tasks:
-    - name : Gathering facts disable task
+    - name: Gathering facts disable task
       gather_facts: no
 
     - name: Starting web server
