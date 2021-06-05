@@ -5,14 +5,14 @@
   tasks:
     - name: I want to update packages
       apt: 
-        update_cache: yes
+        update_cache: yes             #apt-get update
         
     - name: I want to install apache2 package
-      apt:
-       - name: apache2
-         state: present
+      apt:                            #apt-get install apache2
+        name: apache2                
+        state: present
     
     - name: I want to Check apache2 started or not
-      service:
-        - name: apache2
-          state: started
+      service:                        #service apache2 start
+        name: apache2
+        state: started
