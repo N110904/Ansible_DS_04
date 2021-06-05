@@ -5,10 +5,8 @@
 - name: Disable manually gatherfacts 
   hosts: all
   become: yes
+  gather_facts: no             #Gathering facts disable
   tasks:
-    - name: Gathering facts disable task
-      gather_facts: no
-
     - name: Starting web server
       service: 
         name: apache2
