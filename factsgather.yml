@@ -1,0 +1,15 @@
+#Gathering facts example
+#by default facts gather is enable..
+#if we want we can disable it by(gathering_facts:no)
+
+hosts: all
+become: yes
+tasks:
+  - name : Gathering facts disable task
+    gathering_facts: no
+
+  - name: Starting web server
+    service: 
+       name: apache2
+       state: started
+
