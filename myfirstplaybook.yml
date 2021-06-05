@@ -16,4 +16,4 @@
     - name: I want to Check apache2 started or not
       service:                        #service apache2 start
         name: apache2
-        state: started
+        state: stop
