@@ -2,6 +2,7 @@
 ---
 - name: This set up apache2 server
   hosts: all
+  become: yes
   tasks:
     - name: I want to update packages
       apt: 
