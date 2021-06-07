@@ -4,10 +4,10 @@
   hosts: all
   become: yes
   tasks: 
-    name: I want to install tree software in Ubuntu
-    apt:
-      name: tree
-      state: present
-      
+    - name: I want to install tree software in Ubuntu
+      apt:
+        name: tree
+        state: present
+
   
     
