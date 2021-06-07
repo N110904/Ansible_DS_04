@@ -26,7 +26,7 @@
       when: ansible_os_family=="Debian"  
       
     - name: I wanto to install httpd server in RedHat nodes only
-      apt:
+      yum:
         name: httpd
         state: present
       when: ansible_os_family=="RedHat" 
