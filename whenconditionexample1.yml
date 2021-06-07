@@ -6,5 +6,11 @@
     - name: I want to install softwares for Ubuntu nodes only
       apt:
         name: apache2
-        state: absent
+        state: present
       when: ansible_os_family=="Debian"
+
+    - name: I want to start the apache2 server in Ubuntu nodes only
+      service:
+        name: apache2
+        state: started
+      when: ansible_os_family=="Debian"   
