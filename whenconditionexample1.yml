@@ -1,0 +1,10 @@
+#in this playbook, I am gonna install the softwares based on ansible_os_family=="Debian"
+#Using gather_facts information.
+- hosts: all
+  become: yes
+  tasks: 
+    - name: I want to install softwares for Ubuntu nodes only
+      apt:
+        name: apache2
+        state: absent
+      when: ansible_os_family=="Debian"
