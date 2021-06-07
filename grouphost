@@ -1,5 +1,6 @@
 [UbuntuNodes]
 ansible_node@172.31.5.203
+172.31.5.108
 
 [RedhatNodes]
 ansible_node2@172.31.15.237
