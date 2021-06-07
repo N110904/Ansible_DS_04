@@ -3,6 +3,9 @@
 - hosts: all
   become: yes
   tasks: 
+    - name: update cache 
+      apt: 
+        update_cache: yes
     - name: I want to install softwares for Ubuntu nodes only
       apt:
         name: apache2
