@@ -1,7 +1,7 @@
 #This is demo for group of inventories
 #We are mentioned hosts based on the groups in grouphost file
 - name: Demo for Group of Hosts/Nodes
-  hosts: all
+  hosts: UbuntuNodes
   become: yes
   tasks: 
     - name: I want to install tree software in Ubuntu
