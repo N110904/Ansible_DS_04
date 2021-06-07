@@ -6,10 +6,12 @@
     - name: update cache for Ubuntu nodes
       apt: 
         update_cache: yes
+      when: ansible_os_family=="Debian"
 
     - name: update cache for RedHat nodes
       yum:
         update_cache: yes
+      when: ansible_os_family=="RedHat"
 
     - name: I want to install softwares for Ubuntu nodes only
       apt:
@@ -26,7 +28,7 @@
     - name: I wanto to install httpd server in RedHat nodes only
       apt:
         name: httpd
-        state: absent
+        state: present
       when: ansible_os_family=="RedHat" 
 
     - name: I want to start httpd server in RedHat nodes only
