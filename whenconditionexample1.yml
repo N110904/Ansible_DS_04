@@ -13,4 +13,16 @@
       service:
         name: apache2
         state: started
-      when: ansible_os_family=="Debian"   
+      when: ansible_os_family=="Debian"  
+      
+    - name: I wanto to install httpd server in RedHat nodes only
+      apt:
+        name: httpd
+        state: present
+      when: ansible_os_family=="RedHat" 
+
+    - name: I want to start httpd server in RedHat nodes only
+      service:
+        name: httpd
+        state: started
+      when: ansible_os_family=="RedHat"
