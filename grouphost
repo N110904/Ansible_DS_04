@@ -4,3 +4,6 @@ ansible_node@172.31.5.203
 
 [RedhatNodes]
 ansible_node2@172.31.15.237
+
+[RedhatNodes:vars]
+myredhatpackage=tree

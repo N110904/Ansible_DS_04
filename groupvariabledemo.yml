@@ -1,0 +1,10 @@
+#this is for group variable demo..
+#we are mentioning variables in inventory and using those variables in our playbook
+- name: Group of variable
+  hosts: RedhatNodes
+  become: yes
+  tasks:
+    - name: Assigning software name from inventory
+      yum:
+        name: myredhatpackage
+        state: present
