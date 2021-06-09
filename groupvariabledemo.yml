@@ -7,4 +7,9 @@
     - name: Assigning software name from inventory
       yum:
         name: "{{myredhatpackage}}"
-        state: absent
+        state: present
+
+    - name: I want to start the webserver
+      service:
+        name: "{{myredhatpackage}}"
+        state: started
